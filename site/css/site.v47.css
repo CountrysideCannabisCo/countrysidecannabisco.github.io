@@ -283,8 +283,9 @@ body.modal-open { overflow: hidden; }
 
 /* page hero (inner pages) — full-bleed image header */
 .pagehero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; color: #fff; }
-.pagehero__bg { position: absolute; inset: -16% 0; z-index: 0; }
-.pagehero__bg img { width: 100%; height: 132%; object-fit: cover; will-change: transform; transform: scale(1.06); animation: kenburns 30s ease-in-out infinite alternate; }
+.pagehero__bg { position: absolute; inset: -8% 0; z-index: 0; }
+.pagehero__bg img { width: 100%; height: 116%; object-fit: cover; will-change: transform; transform: scale(1.02); animation: kenburns-soft 30s ease-in-out infinite alternate; }
+@keyframes kenburns-soft { from { transform: scale(1.02) translate3d(0,0,0); } to { transform: scale(1.06) translate3d(-1%, -1%, 0); } }
 .pagehero::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
   background:
