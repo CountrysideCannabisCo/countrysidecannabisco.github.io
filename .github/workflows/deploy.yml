@@ -1,17 +1,9 @@
-# Publishes the Countryside website to GitHub Pages.
-# Before launch (Wed 4 Nov 2026, 12:00 Eastern = 17:00 UTC) it serves coming-soon/; from launch on it serves site/.
-# Scheduled runs start early and wait for the exact minute, because GitHub can delay scheduled runs.
+# Publishes the Countryside website (site/) to GitHub Pages on every push to main.
 name: Deploy website
 on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '25 16 4 11 *'
-    - cron: '40 16 4 11 *'
-    - cron: '0 17 4 11 *'
-    - cron: '20 17 4 11 *'
-    - cron: '50 17 4 11 *'
 permissions:
   contents: read
   pages: write
@@ -19,8 +11,6 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: false
-env:
-  LAUNCH: 1793811600
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,18 +19,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Choose coming-soon or full site
-        id: pick
-        run: |
-          now=$(date +%s); left=$((LAUNCH - now))
-          if [ "$left" -gt 0 ] && [ "$left" -le 3000 ]; then
-            echo "Launch in ${left}s: waiting for it"; sleep "$left"; dir=site
-          elif [ "$left" -gt 0 ]; then dir=coming-soon
-          else dir=site; fi
-          echo "Publishing $dir"; echo "dir=$dir" >> "$GITHUB_OUTPUT"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.pick.outputs.dir }}
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4
