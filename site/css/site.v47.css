@@ -1,14 +1,14 @@
 /* Countryside Cannabis — shared styles. Reskin by editing the brand tokens below.
-   Brand palette: Eerie Black #1B1B1E · Gun Powder #373F51 · Golden Tobacco #E2BE66
-                  Smoke #A9A9A9 · White Smoke #F6F5FC */
+   Brand palette: Gun Powder #373F51 (primary) · Golden Tobacco #E2BE66 · White Smoke #F6F5FC
+                  Gun Powder scale 900 #232B3B · 800 #2D3546 · 600 #474F62 · Eerie Black #1B1B1E (ink on gold only) */
 :root {
-  --bg:      #1B1B1E;   /* eerie black */
-  --surface: #24252B;   /* lifted panel */
+  --bg:      #373F51;   /* gun powder (primary) */
+  --surface: #2D3546;   /* gun powder 800 panel */
   --fg:      #F6F5FC;   /* white smoke */
-  --muted:   #A9A9A9;   /* smoke */
+  --muted:   #C7C9D1;   /* muted text on gun powder (AA) */
   --border:  oklch(100% 0 0 / 0.12);
 
-  --forest:  #373F51;   /* gun powder — deep slate */
+  --forest:  #232B3B;   /* gun powder 900 — deep slate */
   --leaf:    #EACB7C;   /* light gold — interactive / eyebrow */
   --sun:     #E2BE66;   /* golden tobacco — accent */
   --accent:  var(--sun);
@@ -175,7 +175,7 @@ p { color: var(--muted); }
   border-left: 1px solid oklch(100% 0 0 / 0.045);
   transition: background .35s ease, border-color .35s ease;
 }
-.nav.scrolled .nav__links { background: oklch(9% 0.008 265 / 0.44); border-color: oklch(100% 0 0 / 0.08); }
+.nav.scrolled .nav__links { background: rgb(35 43 59 / 0.72); border-color: oklch(100% 0 0 / 0.08); }
 /* morphing gold indicator that glides vertically behind the hovered / active link (positioned by JS) */
 .nav__pill {
   position: absolute; z-index: 0; left: 50%; top: 0;
@@ -264,7 +264,7 @@ body.modal-open { overflow: hidden; }
   content: ""; position: absolute; inset: 0; z-index: 1;
   background:
     linear-gradient(180deg, oklch(0% 0 0 / 0.74) 0%, oklch(0% 0 0 / 0.46) 32%, oklch(0% 0 0 / 0.26) 56%, oklch(0% 0 0 / 0.14) 80%),
-    linear-gradient(0deg, oklch(4% 0.004 265 / 0.9) 4%, oklch(8% 0.008 265 / 0.56) 50%, oklch(0% 0 0 / 0.3) 82%, oklch(0% 0 0 / 0.12) 100%),
+    linear-gradient(0deg, rgb(29 36 51 / 0.92) 4%, rgb(35 43 59 / 0.6) 50%, rgb(35 43 59 / 0.3) 82%, rgb(35 43 59 / 0.12) 100%),
     oklch(0% 0 0 / 0.34);
 }
 .hero__inner { position: relative; z-index: 2; width: 100%; padding-bottom: clamp(3.5rem, 8vw, 6.5rem); display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -288,8 +288,8 @@ body.modal-open { overflow: hidden; }
 .pagehero::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(180deg, oklch(0% 0 0 / 0.64) 0%, oklch(0% 0 0 / 0.2) 32%, transparent 48%),
-    linear-gradient(0deg, oklch(4% 0.004 265 / 0.88) 4%, oklch(8% 0.008 265 / 0.24) 54%, transparent 84%);
+    linear-gradient(180deg, rgb(29 36 51 / 0.66) 0%, rgb(29 36 51 / 0.2) 32%, transparent 48%),
+    linear-gradient(0deg, rgb(29 36 51 / 0.9) 4%, rgb(35 43 59 / 0.26) 54%, transparent 84%);
 }
 .pagehero__inner { position: relative; z-index: 2; width: 100%; padding-top: clamp(6rem, 12vw, 9rem); padding-bottom: clamp(2.6rem, 6vw, 4.5rem); }
 .pagehero .eyebrow { color: oklch(86% 0.09 88); }
@@ -447,7 +447,7 @@ body.modal-open { overflow: hidden; }
 
 /* CTA band */
 .cta {
-  background: linear-gradient(135deg, var(--forest), #17181C);
+  background: linear-gradient(135deg, var(--forest), #1D2433);
   color: #fff; border-radius: 22px; padding: clamp(2.5rem, 6vw, 4.5rem);
   text-align: center; position: relative; overflow: hidden;
   border: 1px solid oklch(100% 0 0 / 0.08);
@@ -459,7 +459,7 @@ body.modal-open { overflow: hidden; }
 .cta__actions { position: relative; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* page header (inner pages) */
-.pagehead { padding: clamp(8rem, 14vw, 11rem) 0 clamp(2.5rem, 6vw, 4rem); background: linear-gradient(180deg, #202127, var(--bg)); }
+.pagehead { padding: clamp(8rem, 14vw, 11rem) 0 clamp(2.5rem, 6vw, 4rem); background: linear-gradient(180deg, #2D3546, var(--bg)); }
 .pagehead h1 { max-width: 18ch; margin-top: 1rem; }
 .pagehead p { margin-top: 1.3rem; }
 
@@ -488,7 +488,7 @@ form textarea { min-height: 140px; resize: vertical; }
 .field.invalid .error-msg { display: block; }
 
 /* ---------- footer ---------- */
-.footer { background: #131417; color: oklch(100% 0 0 / 0.7); padding-block: clamp(3.5rem, 7vw, 5rem) 2rem; margin-top: 2rem; border-top: 1px solid var(--border); }
+.footer { background: #232B3B; color: oklch(100% 0 0 / 0.7); padding-block: clamp(3.5rem, 7vw, 5rem) 2rem; margin-top: 2rem; border-top: 1px solid var(--border); }
 .footer__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid oklch(100% 0 0 / 0.12); }
 .footer__brand { font-family: var(--font-display); font-size: 1.5rem; color: #fff; display: flex; align-items: center; gap: 0.5em; margin-bottom: 1rem; }
 .footer__brand .nav__mark { height: 2.1rem; }
@@ -514,7 +514,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .agegate {
   position: fixed; inset: 0; z-index: 200;
   display: grid; place-items: center;
-  background: oklch(0% 0 0 / 0.72);
+  background: rgb(29 36 51 / 0.82);
   backdrop-filter: blur(10px) saturate(1.1);
 }
 .agegate[hidden] { display: none; }
@@ -723,7 +723,7 @@ body.locked { overflow: hidden; }
 @keyframes ccpop { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .cc-chat.is-open .cc-panel { animation: none; } }
 
-.cc-head { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1rem; background: linear-gradient(135deg, var(--forest), #23252b); border-bottom: 1px solid var(--border); }
+.cc-head { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1rem; background: linear-gradient(135deg, var(--forest), #2D3546); border-bottom: 1px solid var(--border); }
 .cc-head__avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--sun); display: grid; place-items: center; flex: none; }
 .cc-head__avatar svg { width: 20px; height: 20px; color: #1B1B1E; }
 .cc-head__title { font-family: var(--font-body); font-weight: 600; color: #fff; font-size: 0.95rem; line-height: 1.2; }
@@ -750,7 +750,7 @@ body.locked { overflow: hidden; }
 .cc-send svg { width: 18px; height: 18px; }
 
 /* facilities — one map + site list */
-.facmap__frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #1B1B1E; }
+.facmap__frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: var(--surface); }
 .facmap__panel { display: flex; flex-direction: column; gap: 0.7rem; }
 .facsite { display: flex; gap: 0.9rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 12px; background: oklch(100% 0 0 / 0.015); }
 .facsite__no { font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.16em; color: var(--muted); padding-top: 0.25rem; flex: none; }
