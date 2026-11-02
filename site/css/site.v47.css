@@ -1057,13 +1057,13 @@ h2, .parallax--full h2, .mission-split h2 { font-size: clamp(var(--t-32), 4.6vw,
 }
 
 /* ===== DEL / GMP badges (Health Canada Drug Establishment Licence) ===== */
-.delseal { position: absolute; left: -22px; top: -22px; z-index: 4; width: 128px; height: 128px; filter: drop-shadow(0 10px 24px oklch(0% 0 0 / .45)); }
+.delseal { position: absolute; left: -26px; top: -26px; z-index: 4; width: 168px; height: 168px; filter: drop-shadow(0 10px 24px oklch(0% 0 0 / .45)); }
 .delseal svg { width: 100%; height: 100%; display: block; }
-.delseal__ring { fill: #F6F5FC; font-family: var(--font-body); font-size: 10.5px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
-.delseal__ring--num { font-size: 12.5px; letter-spacing: 3px; }
-.delseal__gmp { fill: #F6F5FC; font-family: var(--font-display); font-size: 44px; letter-spacing: 4px; }
-.delseal__sub { fill: #E2BE66; font-family: var(--font-body); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; }
-@media (max-width: 860px) { .delseal { width: 100px; height: 100px; left: 8px; top: -18px; } }
+.delseal__ring { fill: #F6F5FC; font-family: var(--font-body); font-size: 17px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.delseal__ring--num { font-size: 18px; letter-spacing: 3px; fill: #E2BE66; }
+.delseal__gmp { fill: #F6F5FC; font-family: var(--font-display); font-size: 50px; letter-spacing: 4px; }
+.delseal__sub { fill: #E2BE66; font-family: var(--font-body); font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+@media (max-width: 860px) { .delseal { width: 128px; height: 128px; left: 8px; top: -22px; } }
 .delstrip { display: inline-flex; align-items: center; gap: 1rem; margin-top: 1.6rem; padding: .85rem 1.3rem .85rem 1rem; border: 1px solid color-mix(in oklch, var(--sun) 60%, transparent); border-radius: 12px; background: var(--surface); }
 .delstrip__icon { width: 34px; height: 36px; flex: none; }
 .delstrip__text { display: flex; flex-direction: column; line-height: 1.3; border-left: 1px solid color-mix(in oklch, var(--sun) 50%, transparent); padding-left: 1rem; }
