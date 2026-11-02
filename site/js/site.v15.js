@@ -309,7 +309,7 @@
     { k: ['contact', 'phone', 'call', 'email', 'reach', 'talk', 'speak', 'get in touch', 'connect'],
       a: 'You can reach us at +1 866-586-0690 or info@countrysidecannabis.com (partnerships: sales@countrysidecannabis.com). Or send a message:', form: true },
     { k: ['gmp', 'eu', 'certif', 'export', 'international'],
-      a: 'We supply partners in Canada and are working toward EU-GMP certification for supply into markets that require it.' },
+      a: 'We supply partners in Canada and internationally, and we are GMP certified under a Health Canada Drug Establishment Licence.' },
     { k: ['age', '19', 'adult', 'legal'],
       a: 'Cannabis products are for adults 19+ only. You will see an age check when you first visit the site.' },
     { k: ['who', 'about', 'story', 'history', 'company', 'licen'],
